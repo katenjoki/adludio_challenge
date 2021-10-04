@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Top Sites per Campaign</title>
+    </head>
+    <body bgcolor="#fcde67">
+        <style>h1{background: #5bccf6;text-align: center;font-family:serif;font: size 30px;}
+        ;form{text-align: center;font-family: serif;}</style>
+        <h1>Top Sites per Campaign </h1>
+        <p>This dashboard allows you to select a specific campaign from the list of available ones
+            and returns the top ranked sites</p>
+        <form method="POST">
+            <label for = "campaign">Choose the Campaign</label> 
+            <select name = "campaign" id = "campaign">
+                <option value = 't29si1w'> Campaign_A</option>
+                <option value = 'fiwemi8'> Campaign_B </option>
+                <option value = 'awbu4q4'> Campaign_C </option>
+                <option value = 'v0fbymt'> Campaign_D </option>
+                <option value = 'dnpjc6c'> Campaign_E </option>
+                <option value = '9n6o7jf'> Campaign_F </option>
+                <option value = '758ifo0'> Campaign_G </option>
+                <option value = 'shg01yl'> Campaign_H </option>
+                <option value = '8muucqy'> Campaign_I </option>
+                <option value = 'xygdmea'> Campaign_J </option>
+                <option value = '0k2sw7w'> Campaign_K </option>
+                <option value = 'z5cjizq'> Campaign_L </option>
+                <option value = '5qtwg2a'> Campaign_M </option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <end></end>
+        </form>
+        <p>
+            {% for table in tables %}
+                {{titles[loop.index]}}
+                {{ table|safe }}
+            {% endfor %}
+        </p>
+    </body>
+</html>
