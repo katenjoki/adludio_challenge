@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/', methods = ('POST','GET'))
 
 def home():
-    #output=None
+    output=None
     if request.method == 'POST':
         user_input = request.form.get('campaign')
         output = site_scores(user_input)
