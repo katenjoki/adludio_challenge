@@ -10,10 +10,8 @@ app = Flask(__name__)
 @app.route('/', methods = ('POST','GET'))
 
 def home():
-    output=None
-    if request.method == 'POST':
-        user_input = request.form.get('campaign')
-        output = site_scores(user_input)
+    user_input = request.form.get('campaign')
+    output = site_scores(user_input)
     
     return render_template('home.html',tables=[output.to_html(classes='data',escape=False)],titles=output.columns.values)
     #return render_template('home.html',outputs=output)
